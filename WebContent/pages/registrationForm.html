@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-controller="myForm">
+<table>
+<tr><td>Enter First Name: </td><td><input type="text" ng-model ="fn" ></input></td></tr>
+<tr><td>Enter Second Name: </td><td><input type="text" ng-model ="sn" ></input></td></tr>
+<tr><td>Enter Age:</td><td><input type="text" ng-model ="age" ></input></td></tr>
+<tr><td>Enter Id:</td><td><input type="text" ng-model ="id" ></input></td></tr>
+<tr><td><button ng-click="save()">Save</button></td></tr>
+</table>
+<h2>List added:</h2>
+<table>
+<tr><th>First Name</th><th>Second Name</th><th>Age</th><th>Id</th></tr>
+<tr ng-repeat="l in list">
+    <td>{{ l.fn }}</td>
+    <td>{{ l.sn }}</td>
+    <td>{{ l.age }}</td>
+    <td>{{ l.id }}</td>
+ </tr>
+</table>
+</div>
+</body>
+</html>
